@@ -1,0 +1,97 @@
+:root {
+    --gap-big: 30px;
+    --gap-small: 15px;
+    --controls-margin: 20px;
+    @media only screen and (max-width: 768px) {
+        --gap-big: 20px;
+        --gap-small: 10px;
+        --controls-margin: 10px;
+    }
+}
+body {
+    padding: 25px;
+    background: rgb(17,17,20);
+    background: linear-gradient(45deg, rgba(17,17,20,1) 0%, rgba(57,62,62,1) 100%);
+    background-size: cover;
+}
+
+.app-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.recommend-card {
+    padding: var(--gap-big);
+    display: flex;
+    gap: var(--gap-big);
+    justify-content: space-between;
+    border-radius: 15px;
+    background: rgb(70,70,77);
+    background: linear-gradient(-45deg, rgba(70,70,77,.3) 0%, rgba(103,104,105,.3) 100%);
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.31);
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+.recommend-card-item {
+    &:first-child {
+        flex: 1 1 40%;
+    }
+    &:last-child {
+        flex: 1 1 60%;
+    }
+}
+
+.movie-card {
+    display: flex;
+    gap: var(--gap-small);
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+.movie-cover {
+    flex: 0 0 50%;
+}
+.movie-cover-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.31);
+    @media only screen and (max-width: 768px) {
+        width: 175px;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+.movie-content {
+    display: flex;
+    flex-direction: column;
+}
+.movie-description {
+    margin-bottom: var(--controls-margin);
+}
+.movie-badges {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--controls-margin);
+}
+.movie-badge {
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, .2);
+}
+.movie-trailer-btn {
+    margin-top: auto;
+}
+
+.placeholder {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (max-width: 768px) {
+        height: 150px;
+    }
+}

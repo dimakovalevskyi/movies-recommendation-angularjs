@@ -1,7 +1,7 @@
 <div class="recommend-card">
-    <recommend-form on-submit="$ctrl.findMovie(filters)"></recommend-form>
-    <movie-card ng-if="$ctrl.recommendation" movie="$ctrl.recommendation"></movie-card>
-    <div ng-if="!$ctrl.recommendation">
+    <recommend-form on-submit="$ctrl.findMovie(filters)" class="recommend-card-item"></recommend-form>
+    <movie-card ng-if="$ctrl.recommendation" movie="$ctrl.recommendation" class="recommend-card-item"></movie-card>
+    <div ng-if="!$ctrl.recommendation" class="recommend-card-item">
         <loader ng-if="$ctrl.loading"></loader>
         <placeholder ng-if="!$ctrl.loading" text="$ctrl.pristine ? 'Click to start the journey' : 'Nothing found by your filters :('"></placeholder>
     </div>

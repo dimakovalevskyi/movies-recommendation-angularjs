@@ -10,6 +10,6 @@
             <div class="movie-badge">{{$ctrl.GENRES_MAP[$ctrl.movie.genre_type]}}</div>
         </div>
         <div class="movie-description">{{$ctrl.movie.description}}</div>
-        <a class="movie-trailer-btn" ng-href="{{$ctrl.movie.trailer_link}}" target="_blank">Watch Trailer</a>
+        <button type="button" class="btn movie-trailer-btn" ng-click="$ctrl.watchTrailer()">Watch Trailer</button>
     </div>
 </div>

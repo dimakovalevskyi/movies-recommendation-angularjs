@@ -26,7 +26,6 @@ angular.module('app').component('recommendForm', {
             };
 
             this.submit = function() {
-                console.log('submit');
                 this.onSubmit({filters: this.filters});
             };
         }

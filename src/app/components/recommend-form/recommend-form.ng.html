@@ -1,26 +1,26 @@
 <form ng-submit="$ctrl.submit()">
     <div class="form-group">
         <label for="genre">Genre</label>
-        <select name="genre" id="genre" ng-model="$ctrl.filters.genre" ng-options="genreOption.value as genreOption.label for genreOption in $ctrl.genreOptions">
+        <select class="form-control" name="genre" id="genre" ng-model="$ctrl.filters.genre" ng-options="genreOption.value as genreOption.label for genreOption in $ctrl.genreOptions">
             <option value="">All</option>
         </select>
     </div>
 
     <div class="form-group">
         <label for="score">IMDB Score</label>
-        <select name="score" id="score" ng-model="$ctrl.filters.score" ng-options="scoreOption as (scoreOption + '+') for scoreOption in $ctrl.scoreOptions">
+        <select class="form-control" name="score" id="score" ng-model="$ctrl.filters.score" ng-options="scoreOption as (scoreOption + '+') for scoreOption in $ctrl.scoreOptions">
             <option value="">All</option>
         </select>
     </div>
 
     <div class="form-group">
         <label for="year">Year</label>
-        <select name="year" id="year" ng-model="$ctrl.filters.year" ng-options="yearOption for yearOption in $ctrl.yearOptions">
+        <select class="form-control" name="year" id="year" ng-model="$ctrl.filters.year" ng-options="yearOption for yearOption in $ctrl.yearOptions">
             <option value="">All</option>
         </select>
     </div>
 
     <div class="form-group">
-        <button type="submit">Find Movie</button>
+        <button type="submit" class="btn">Find Movie</button>
     </div>
 </form>
