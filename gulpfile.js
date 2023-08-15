@@ -7,6 +7,7 @@ const sass = require('gulp-sass')(require('sass'));
 const htmlmin = require('gulp-htmlmin');
 const angularTemplates = require('gulp-angular-templates-lite');
 const browserSync = require("browser-sync").create();
+const ghpages = require('gh-pages');
 
 function clean(cb) {
     del(['dist/**'], cb);
@@ -85,4 +86,7 @@ exports.dev = function() {
         watch: true,
         server: "./dist"
     });
+};
+exports.deploy = function(cb) {
+    ghpages.publish('dist', cb);
 };
