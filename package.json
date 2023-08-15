@@ -5,6 +5,7 @@
   "scripts": {
     "start": "npx gulp",
     "dev": "npm start && npx gulp dev",
+    "deploy": "npx gulp deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dima Kovalevskyi <dimakovalevskyi@gmail.com>",
