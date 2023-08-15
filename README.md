@@ -1,2 +1,2 @@
-# movies-recomendation-angularjs
-Simple Movies Recomendation App based on Angular.js
+# movies-recommendation-angularjs
+Simple Movies Recommendation App based on Angular.js
