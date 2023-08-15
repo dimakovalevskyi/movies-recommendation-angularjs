@@ -4,8 +4,9 @@ angular.module('app').component('movieCard', {
         movie: '<',
     },
     controller: [
-        function() {
-
+        'GENRES_MAP',
+        function(GENRES_MAP) {
+            this.GENRES_MAP = GENRES_MAP;
         }
     ]
 });

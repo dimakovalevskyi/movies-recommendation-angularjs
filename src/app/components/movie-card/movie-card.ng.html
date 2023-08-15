@@ -1,3 +1,15 @@
 <div class="movie-card">
-    <pre>{{$ctrl.movie|json}}</pre>
+    <div class="movie-cover">
+        <img class="movie-cover-image" ng-src="{{$ctrl.movie.image_path}}" alt="{{$ctrl.movie.title}}">
+    </div>
+    <div class="movie-content">
+        <h2 class="movie-title">{{$ctrl.movie.title}}</h2>
+        <div class="movie-badges">
+            <div class="movie-badge">{{$ctrl.movie.year}}</div>
+            <div class="movie-badge">{{$ctrl.movie.rating_score}}</div>
+            <div class="movie-badge">{{$ctrl.GENRES_MAP[$ctrl.movie.genre_type]}}</div>
+        </div>
+        <div class="movie-description">{{$ctrl.movie.description}}</div>
+        <a class="movie-trailer-btn" ng-href="{{$ctrl.movie.trailer_link}}" target="_blank">Watch Trailer</a>
+    </div>
 </div>
