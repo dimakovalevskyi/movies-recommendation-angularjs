@@ -21,6 +21,9 @@ angular.module('app').component('recommendForm', {
         this.scoreOptions = [...Array(10).keys()]; // array from 0 to 9
         this.scoreOptions.splice(0, 1); // array from 1 to 9
 
+        /**
+         * @type {Filters}
+         */
         this.filters = {
             genre: null,
             year: null,
